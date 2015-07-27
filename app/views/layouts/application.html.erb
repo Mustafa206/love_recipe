@@ -8,7 +8,36 @@
 </head>
 <body>
 
+  <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+    <ul class="nav navmenu-nav">
+      <li class="active"><a href="#"><i class="fa fa-food"></i> Find Recipes </a> </li>
+      <li class="active"><a href="#"><i class="fa fa-users"></i> My Profile </a> </li>
+      <li class="active"><a href="#"><i class="fa fa-question-circle"></i> Help </a> </li>
+
+
+    </ul>
+  </nav>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <i class="fa fa-cog"> </i>
+  </button>
+
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <i class="fa fa-heart"> </i>
+  </button>
+
+
+  </div>
+    <a.class="navbar-brand" href="#">
+
+
+
+
+
 <%= yield %>
+
 
 </body>
 </html>
