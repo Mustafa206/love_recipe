@@ -1,46 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>LoveRecipe</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>LoveRecipe</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<body>
+  <body>
 
-  <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-    <ul class="nav navmenu-nav">
-      <li class="active"><a href="#"><i class="fa fa-search"></i><br><br>Find Recipes </a> </li>
-      <li class="active"><a href="#"><i class="fa fa-users"></i> <%= link_to "Profile", current_user %> </i></li>
-      <li class="active"><a href="#"><i class="fa fa-sign-out"> </i> <%= link_to "Log out", logout_path, method: "delete" %></i> </li>
+    <% if current_user %>
+
+    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+      <ul class="nav navmenu-nav">
+        <li class="active"><a href="#"><i class="fa fa-search"></i><br><br>Find Recipes </a> </li>
+        <li class="active"><a href="#"><i class="fa fa-users"></i> <%= link_to "Profile", current_user %> </i></li>
+        <li class="active"><a href="#"><i class="fa fa-sign-out"> </i> <%= link_to "Log out", logout_path, method: "delete" %></i> </li>
 
 
-    </ul>
-  </nav>
+      </ul>
+    </nav>
 
-  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
+
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo.png", alt: "sample logo", class: "logo-brand" %>
+      </a>
+
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+        <i class="fa fa-cog fa-3x"></i>
+      </button>
+
+
+
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+        <i class="fa fa-heart fa-3x"> </i>
+      </button>
+
+      <% end %>
+
+    </div>
+
+    <% else %>
+
     <a class="navbar-brand" href="#">
-    <%= image_tag "logo.png", alt: "sample logo", class: "logo-brand" %>
-  </a>
-
-  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-    <i class="fa fa-cog fa-3x"></i>
-  </button>
-
-    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-    <i class="fa fa-heart fa-3x"> </i>
-  </button>
-
-
-  </div>
+        <%= image_tag "logo.png", alt: "sample logo", class: "logo-brand" %>
+      </a>
 
 
 
+      <%= yield %>
 
 
-<%= yield %>
-
-
-</body>
-</html>
+    </body>
+    </html>
