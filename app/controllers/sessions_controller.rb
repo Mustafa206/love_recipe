@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
       #wrong email or password
       flash[:danger] = 'Invalid email or password.'
       # render :new
-      redirect_to login_path
+      redirect_to root_path
     end
 
   end
