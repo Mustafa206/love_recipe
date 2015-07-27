@@ -12,7 +12,14 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
   end
 
-  private
+
+
+    def destroy
+    log_out
+    redirect_to root_url
+    end
+
+private
 
     def user_params
       params.require(:user).permit(:name, :email, :password,

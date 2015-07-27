@@ -11,9 +11,9 @@
 
   <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
     <ul class="nav navmenu-nav">
-      <li class="active"><a href="#"><i class="fa fa-food-icon"></i> Find Recipes </a> </li>
-      <li class="active"><a href="#"><i class="fa fa-users"></i> My Profile </a> </li>
-      <li class="active"><a href="#"><i class="fa fa-question-circle"></i> Help </a> </li>
+      <li class="active"><a href="#"><i class="fa fa-search"></i><br><br>Find Recipes </a> </li>
+      <li class="active"><a href="#"><i class="fa fa-users"></i> <%= link_to "Profile", current_user %> </i></li>
+      <li class="active"><a href="#"><i class="fa fa-sign-out"> </i> <%= link_to "Log out", logout_path, method: "delete" %></i> </li>
 
 
     </ul>
