@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
   <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
@@ -19,13 +20,12 @@
   </nav>
 
   <div class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand" href="#">
+    <%= image_tag "logo.png", alt: "Tinstuk Logo", class: "logo-brand" %>
+  </a>
 
   <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
     <i class="fa fa-cog fa-3x"></i>
-  </button>
-
-  <button type="button" class="navbar-toggle"  style="float: right;" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-    <i class="fa fa-sign-in fa-3x"></i> Sign in
   </button>
 
     <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
@@ -34,7 +34,6 @@
 
 
   </div>
-    <a.class="navbar-brand" href="#">
 
 
 
