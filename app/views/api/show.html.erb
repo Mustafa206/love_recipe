@@ -1,6 +1,8 @@
+<div class="container">
+
 <% @food.each do |item| %>
 <div class="well">
-<h1><%= item["title"] %></h1>
+<h1><%= link_to item["title"], item["href"] %></h1>
 <h1><%= image_tag item["thumbnail"] %></h1>
 </div>
 <% end %>
@@ -11,3 +13,4 @@
 <%= link_to "Search again", root_path, class: "btn btn-primary" %>
 </div> -->
 <% end %>
+</div>

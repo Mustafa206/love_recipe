@@ -11,3 +11,18 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #fc735d;
+    border-color: #fc735d;
+
+}
+    .btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #fc735d;
+    color: #fc735d;
+    box-shadow: none;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    margin-left: 5px;
+}
