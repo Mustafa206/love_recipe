@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post "recipe" => 'api#show'
   root 'main#index'
   get 'users' => 'users#index'
-  get 'signup' => 'users#signup'
+  get 'signup' => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

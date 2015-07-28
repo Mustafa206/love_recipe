@@ -5,15 +5,20 @@
 <div class="home-information">
 <h1 class="slogan"> Come find a recipe, <small>we won't judge </h1>
 
+
+
+
+<div class="container">
 <%= bootstrap_form_tag url: "recipe" do |f| %>
   <%= f.text_field :q %>
- <%= f.submit "Search", wrapper: {icon: "fa fa-search-4x", class: "form-control input"}  %>
+ <%= button_tag(class: "form-control input", type: "submit") do %>
+    <span class='fa fa-search'></span> Search
+ <% end %>
 <% end %>
 
+</div>
 
 
-
-<br>
 
 
 </div>
@@ -26,7 +31,7 @@
 
   jQuery(function($) {
 
-    $.supersized({
+    $('body').supersized({
         slide_interval    : 4000,
         transition        :1,
         transition_speed  :700,
