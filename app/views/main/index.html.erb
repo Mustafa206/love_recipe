@@ -6,33 +6,20 @@
 <h1 class="slogan"> Come find a recipe, <small>we won't judge </h1>
 
 <%= bootstrap_form_tag url: "recipe" do |f| %>
-  <%= f.text_field :q, label: " " %>
-  <%= f.primary "Search" %>
+  <%= f.text_field :q %>
+ <%= f.submit "Search", wrapper: {icon: "fa fa-search-4x", class: "form-control input"}  %>
 <% end %>
 
 
 
-<!--   <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="mmmmmm......" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div> -->
+
 <br>
 
 
 </div>
 
 
-<!-- <div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-        <source src="http://sendvid.com/a6kiqw0v" type="video/mp4">
 
-    </video>
-</div> -->
 
 
   <script type="text/javascript">
