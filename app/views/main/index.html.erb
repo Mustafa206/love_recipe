@@ -4,7 +4,15 @@
 
 <div class="home-information">
 <h1 class="slogan"> Come find a recipe, <small>we won't judge </h1>
-  <div id="custom-search-input">
+
+<%= bootstrap_form_tag url: "recipe" do |f| %>
+  <%= f.text_field :q, label: "Search for food" %>
+  <%= f.primary "Search" %>
+<% end %>
+
+
+
+<!--   <div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <input type="text" class="form-control input-lg" placeholder="mmmmmm......" />
                     <span class="input-group-btn">
@@ -12,7 +20,7 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </span>
-                </div>
+                </div> -->
 <br>
    <a class ="btn btn-social btn-lg btn-facebook">
     <i class = "fa fa-facebook"></i> Sign in via Facebook

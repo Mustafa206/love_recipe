@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  post "recipe" => 'api#show'
   root 'main#index'
   get 'users' => 'users#index'
   get 'signup' => 'users#signup'
@@ -6,6 +8,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources:users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
