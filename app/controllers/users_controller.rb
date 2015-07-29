@@ -24,6 +24,9 @@ class UsersController < ApplicationController
     redirect_to root_url
     end
 
+    def favorite
+    @user= User.find params[:id]
+    end
 private
 
     def user_params

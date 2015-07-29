@@ -1,6 +1,13 @@
 
 /* forms */
 
+.name {
+float: right;
+margin-top:25px;
+margin-right: 15px;
+color: #fc735d;
+}
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;

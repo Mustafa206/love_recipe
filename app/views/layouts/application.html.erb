@@ -1,9 +1,9 @@
   <!DOCTYPE html>
   <html>
   <head>
-    <title>LoveRecipe</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <title>Recipe</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -16,16 +16,17 @@
         <li class="active"><a href="#"><i class="fa fa-search"></i><br><%= link_to "Find Recipes",root_path %></li>
         <li class="active"><a href="#"><i class="fa fa-users"></i> <%= link_to "Profile", @current_user %> </i></li>
         <li class="active"><a href="#"><i class="fa fa-sign-out"> </i> <%= link_to "Log out", logout_path, method: "delete" %></i> </li>
-
-
+        <li class="active"><a href="#"><i class="fa fa-users"></i> <%= link_to "Favorites", favorite_path(current_user.id) %> </i></li>
       </ul>
     </nav>
 
     <div class="navbar navbar-default navbar-fixed-top">
 
       <a class="navbar-brand" href="#">
-        <%= image_tag "logo.png", alt: "sample logo", class: "logo-brand" %>
+        <%= link_to image_tag("logo.png"), root_path, :class => "navbar-brand" %>
       </a>
+
+      <span class="name"> You are logged in as <%= @current_user.name %> </span>
 
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
         <i class="fa fa-cog fa-3x"></i>
@@ -37,22 +38,31 @@
         <i class="fa fa-heart fa-3x"> </i>
       </button>
 
-      <% end %>
+
 
     </div>
 
     <% else %>
 
-    <a class="navbar-brand" href="#">
-        <%= image_tag "logo.png", alt: "sample logo", class: "logo-brand" %>
-      <br>
+    <div class="navbar-brand">
 
-      </a>
+    <%= link_to image_tag('logo.png'), root_path, :class => "navbar-brand"  %>
+
+    </div>
+
+
+    <br>
+
+
     <%= link_to "Login", login_path, class: "btn btn-primary pull-right bring-top" %>
      <%= link_to "Signup", signup_path, class: "btn btn-primary pull-right bring-top" %>
+
+     <% end %>
+
 
       <%= yield %>
 
 
     </body>
     </html>
+
