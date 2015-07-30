@@ -3,7 +3,6 @@ $(function(){
 console.log('script.js loaded')
 $('.favorite').click (function(e) {
     e.preventDefault();
-    console.log('working')
     var favorite = $(this)
      $.ajax({
       url: favorite.attr('data'),

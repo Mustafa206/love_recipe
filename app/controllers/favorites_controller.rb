@@ -9,9 +9,12 @@ class FavoritesController < ApplicationController
     # render layout: false
   end
 
-  # def new
-  #   @Favorite = Favorite.new
-  # end
+  def show
+
+   # @favorites = Favorite.where(:user_id) => @user.id)
+
+
+  end
 
   def create
     f = Favorite.create favorite_params
