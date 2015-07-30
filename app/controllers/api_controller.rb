@@ -10,7 +10,8 @@ class ApiController < ApplicationController
     if @query
       response = RestClient.get 'http://www.recipepuppy.com/api/', {:params => {:i => @query}}
       @food = JSON.parse(response)['results']
-      # render json: @food
+      @results = @food
+      # render json: @results[0]["href"]
     else
       @food = []
     end

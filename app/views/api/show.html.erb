@@ -4,6 +4,9 @@
 <div class="well">
 <h1><%= link_to item["title"], item["href"] %></h1>
 <h1><%= image_tag item["thumbnail"] %></h1>
+<%# link_to "Favorite", "#", :class => "button favorite", :method => :post  %>
+<p class="favorite" data="/favorites"> Favorite </p>
+
 </div>
 <% end %>
 

@@ -29,6 +29,7 @@ gem 'bcrypt'
  gem 'bootstrap-sass'
  gem "autoprefixer-rails"
  gem "font-awesome-sass"
+ gem 'gon'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

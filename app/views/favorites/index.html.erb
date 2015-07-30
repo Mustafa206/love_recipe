@@ -1,0 +1,33 @@
+
+<div class="container">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Recipe</th>
+        <th class="put-it-here">Favorited on</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row"> <%= image_tag "bg1.jpg", size: "30x30" %> </th>
+        <td>Username</td>
+        <td>6/30/15
+        <td class="text-right">
+        <a href="" data-toggle="tooltip" data-placement="top"> <i class="fa fa-trash-o"> </i> </a>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+
+</div>
+
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

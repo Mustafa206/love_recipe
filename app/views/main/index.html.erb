@@ -7,14 +7,12 @@
 
 
 <div class="home-information">
-<h1 class="slogan"> Come find a recipe</h1>
-
-
+<h1 class="slogan"> We <i class="fa fa-heart"</i> food and we know you do too</h1>
 
 
 <div class="container">
 <%= bootstrap_form_tag url: "recipe" do |f| %>
-  <%= f.text_field :q %>
+  <%= f.text_field :q  %>
  <%= button_tag(class: "form-control input", type: "submit") do %>
     <span class='fa fa-search'></span> Search
  <% end %>
