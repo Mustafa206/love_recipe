@@ -90,20 +90,35 @@ body {
 }
 
 .login-button {
-color: #white;
-font-family: 'Sofia';
-background-color: #282828
+color: white;
+font-size: 20px;
+font-family: 'Merienda';
+background-color: transparent;
+
+border-color: #fc735d;
+margin: 0 auto;
+ padding-top: 30px;
+  padding-bottom: 30px;
 
 }
 .signup-button {
-color: #white;
-font-family: 'Sofia';
-background-color: #282828
-
+color: white;
+font-size: 20px;
+font-family: 'Merienda';
+background-color: transparent;
+margin: 0 auto;
+border-color: #fc735d;
+ padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
+.search-bar {
+color: #fc735d
 
+
+
+}
 
 /*NavBAR*/
 .navmenu-default, .navbar-default .navbar-offcanvas {

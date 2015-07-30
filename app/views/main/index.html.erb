@@ -9,13 +9,12 @@
 <div class="home-information">
 <h1 class="slogan"> mmmmmm.... <i class="fa fa-heartbeat"> must find food now </i> </h1>
 
-<!--  <h1 class="slogan">food now</h1>
- -->
+
 <div class="container">
 <%= bootstrap_form_tag url: "recipe" do |f| %>
   <%= f.text_field :q  %>
  <%= button_tag(class: "form-control input", type: "submit") do %>
-    <span class='fa fa-search'></span> Search
+    <span class='search-bar fa fa-search'></span> Search
  <% end %>
 <% end %>
 
