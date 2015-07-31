@@ -16,7 +16,7 @@ $('.favorite').click (function(e) {
 
     }).done(function(data){
        // $('.put-it-here').html(data);
-       alert("Saved!");
+       alert("Added to favorites");
     });
 
 
