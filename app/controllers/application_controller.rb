@@ -10,6 +10,11 @@ include SessionsHelper
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  def is_authenticated?
+    unless @current_user
+      redirect_to login_path
+    end
+  end
 
 
 end

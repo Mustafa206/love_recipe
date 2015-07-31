@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   # get "favorites/:id" =>  'users#favorite', as: :favorite
 
-  resources:favorites
+  resources:favorites, except: [:destroy]
+
+  delete 'favorites/:id' => 'favorites#destroy', as: 'delete_favorite'
+
   resources:users
 
   # The priority is based upon order of creation: first created -> highest priority.

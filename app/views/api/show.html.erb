@@ -4,13 +4,13 @@
 <div class="well">
 <h1><%= link_to item["title"], item["href"] %></h1>
 <h1><%= image_tag item["thumbnail"] %></h1>
-<%# link_to "Favorite", "#", :class => "button favorite", :method => :post  %>
-<!-- <p class="favorite" data="/favorites"> Favorite </p> -->
 
-<!<%link_to('Add to Favorites', favorite_path(user[:id]), :html => {:class => 'btn.btn-large.btn-primary'})  %> -->
+<span class="favorite btn btn-default" data="/favorites"> Favorite</span></span>
+
 
 </div>
 <% end %>
+
 
 <% if @food.empty? %>
 <div class="well">

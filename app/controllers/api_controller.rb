@@ -1,4 +1,5 @@
 class ApiController < ApplicationController
+  before_action :is_authenticated?
   require 'rest-client'
 
   def index
@@ -8,7 +9,7 @@ class ApiController < ApplicationController
     @query = params[:q]
 
     if @query
-      response = RestClient.get 'http://www.recipepuppy.com/api/', {:params => {:i => @query}}
+      response = RestClient.get 'http://www.recipepuppy.com/api/', {:params => {:id => @query}}
       @food = JSON.parse(response)['results']
       @results = @food
       # render json: @results[0]["href"]
