@@ -7,7 +7,7 @@
 
 <div class="container">
 <%= bootstrap_form_tag url: "recipe" do |f| %>
-  <%= f.text_field :q  %>
+  <%= f.text_field :q, hide_label: true  %>
  <%= button_tag(class: "form-control input", type: "submit") do %>
     <span class='search-bar fa fa-search'></span> Search
  <% end %>
